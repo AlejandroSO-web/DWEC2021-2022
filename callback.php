@@ -1,15 +1,13 @@
 <?php
-$numeros = [1, 2, 3, 4, 5];
-$numeros2 = [6, 7, 8, 9, 10];
 
-$num = array_map('null',$numeros,$numeros2);
-print_r($num);
+$cadena = ["me gusta el fubtol", "como estas?", "la mano arriba", "cadena de cadenas"];
 
-$maximo = max($numeros(1, 2, 3, 4, 5),$numeros2(6, 7, 8, 9, 10));
+$modificar = array_map("strlen", $cadena);
 
-$minimo = min($numeros(1, 2, 3, 4, 5),$numeros2(6, 7, 8, 9, 10));
+print_r($modificar);
+echo "<br><br>";
 
-echo "Valor mas alto " . $maximo . "valor mas bajo " . $minimo;
-
+echo "El numero mas grande es " . max($modificar) ."<br><br>";
+echo "El numero mas pequeño es " . min($modificar)."<br><br>";
 
 ?>
