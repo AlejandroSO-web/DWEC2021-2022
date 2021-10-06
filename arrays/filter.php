@@ -26,13 +26,13 @@ array("codigo" => 5, "nombre" => "Nora Jover",
 
 
 
-$filtrados = [];
-$filtrarPor = strtolower($_GET["filtrarPor"] ?? "");
-foreach ($contactos as $contacto){
-    if (strpos(strtolower($contacto["email"]), $filtrarPor) !== FALSE){
-        $filtrados[] = $contacto;
-    }
-}
+
+$filtrarPor = strtolower($_GET["filtrarPor"] ?? "Pepe");
+
+$filtrados = array_filter($contactos , 
+        function($contacto) use  ($filtrarPor){
+                return strpos(strtolower($contacto["nombre"]), $filtrarPor) !== FALSE;
+});
 
 print_r($filtrados);
 ?>
