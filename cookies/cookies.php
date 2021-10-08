@@ -34,7 +34,7 @@
 
     <title><?= $title ?></title>
 
-    <meta name="author" content="Víctor Ponz">
+    <meta name="author" content="Alejandro Sanchez">
 
 </head>    
 
